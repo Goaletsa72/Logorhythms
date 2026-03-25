@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Submit new or renewal communications licensing applications to BOCRA."
+    />
+    <title>Licensing — BOCRA</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div id="header"></div>
+
+    <main id="main-content" class="page page--licensing">
+      <div class="container">
+        <header class="page-header">
+          <h1>Licensing application</h1>
+          <p>
+            Start a new application or submit a renewal request. This form is structured and
+            backend-ready for API integration.
+          </p>
+        </header>
+
+        <div class="license-meta">
+          <div class="license-meta__item">
+            <span class="license-meta__label">Intake status</span>
+            <span class="license-meta__value">Open</span>
+          </div>
+          <div class="license-meta__item">
+            <span class="license-meta__label">Average review</span>
+            <span class="license-meta__value">15–30 business days</span>
+          </div>
+          <div class="license-meta__item">
+            <span class="license-meta__label">Application ID</span>
+            <span class="license-meta__value">Generated after submit</span>
+          </div>
+        </div>
+
+        <form
+          class="form-panel form-panel--license"
+          action="/api/licensing/applications"
+          method="post"
+          enctype="multipart/form-data"
+          data-endpoint="/api/licensing/applications"
+        >
+          <p class="form-panel__intro">
+            This UI is ready for backend wiring. Keep `name` attributes unchanged to map payload
+            fields consistently.
+          </p>
+
+          <fieldset class="form-section">
+            <legend class="form-section__title">Application scope</legend>
+            <p class="form-section__lead">Choose the request type and service category.</p>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="application-type">Application type <span class="form-required-mark">*</span></label>
+                <select id="application-type" name="application_type" required>
+                  <option value="" selected disabled>Select type</option>
+                  <option value="new">New license</option>
+                  <option value="renewal">Renewal</option>
+                  <option value="variation">Variation / amendment</option>
+                  <option value="transfer">Transfer of control</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="service-category">Service category <span class="form-required-mark">*</span></label>
+                <select id="service-category" name="service_category" required>
+                  <option value="" selected disabled>Select category</option>
+                  <option value="network">Network services</option>
+                  <option value="internet">Internet service provider</option>
+                  <option value="broadcast">Broadcasting</option>
+                  <option value="postal">Postal services</option>
+                  <option value="spectrum">Spectrum usage</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="operation-region">Region of operation <span class="form-required-mark">*</span></label>
+                <select id="operation-region" name="operation_region" required>
+                  <option value="" selected disabled>Select region</option>
+                  <option value="national">National</option>
+                  <option value="district">District-specific</option>
+                  <option value="cross-border">Cross-border</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="requested-start-date">Requested start date <span class="form-required-mark">*</span></label>
+                <input id="requested-start-date" name="requested_start_date" type="date" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="form-section__title">Applicant details</legend>
+            <p class="form-section__lead">Legal entity details and primary contact person.</p>
+
+            <div class="form-field">
+              <label for="entity-name">Legal entity name <span class="form-required-mark">*</span></label>
+              <input id="entity-name" name="entity_name" type="text" required autocomplete="organization" />
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="registration-number">Registration number <span class="form-required-mark">*</span></label>
+                <input id="registration-number" name="registration_number" type="text" required />
+              </div>
+              <div class="form-field">
+                <label for="tax-number">Tax / TIN number</label>
+                <input id="tax-number" name="tax_number" type="text" />
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="contact-name">Contact person full name <span class="form-required-mark">*</span></label>
+                <input id="contact-name" name="contact_name" type="text" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="contact-role">Role / designation <span class="form-required-mark">*</span></label>
+                <input id="contact-role" name="contact_role" type="text" required placeholder="e.g. Regulatory Affairs Manager" />
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="contact-email">Email address <span class="form-required-mark">*</span></label>
+                <input id="contact-email" name="contact_email" type="email" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">Phone number <span class="form-required-mark">*</span></label>
+                <input id="contact-phone" name="contact_phone" type="tel" required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="registered-address">Registered address <span class="form-required-mark">*</span></label>
+              <textarea id="registered-address" name="registered_address" rows="3" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="form-section__title">Technical & compliance information</legend>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="service-description">Service summary <span class="form-required-mark">*</span></label>
+                <textarea
+                  id="service-description"
+                  name="service_description"
+                  rows="4"
+                  required
+                  placeholder="Describe the service, customer segment, and operating model."
+                ></textarea>
+              </div>
+              <div class="form-field">
+                <label for="coverage-plan">Coverage plan <span class="form-required-mark">*</span></label>
+                <textarea
+                  id="coverage-plan"
+                  name="coverage_plan"
+                  rows="4"
+                  required
+                  placeholder="Target locations, rollout phases, and key milestones."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-grid form-grid--2">
+              <div class="form-field">
+                <label for="spectrum-needed">Spectrum required?</label>
+                <select id="spectrum-needed" name="spectrum_required">
+                  <option value="no" selected>No</option>
+                  <option value="yes">Yes</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="target-launch">Target commercial launch <span class="form-required-mark">*</span></label>
+                <input id="target-launch" name="target_launch_date" type="date" required />
+              </div>
+            </div>
+
+            <fieldset class="form-field form-field--radios">
+              <legend class="form-label">Compliance status <span class="form-required-mark">*</span></legend>
+              <div class="form-radio-group">
+                <label class="form-check">
+                  <input type="radio" name="compliance_status" value="fully_compliant" required />
+                  <span>Fully compliant</span>
+                </label>
+                <label class="form-check">
+                  <input type="radio" name="compliance_status" value="in_progress" required />
+                  <span>In progress</span>
+                </label>
+                <label class="form-check">
+                  <input type="radio" name="compliance_status" value="requires_support" required />
+                  <span>Requires guidance</span>
+                </label>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend class="form-section__title">Attachments & declarations</legend>
+
+            <div class="form-field">
+              <label for="company-profile">Company profile (PDF) <span class="form-required-mark">*</span></label>
+              <input id="company-profile" name="company_profile" type="file" accept=".pdf" required />
+            </div>
+
+            <div class="form-field">
+              <label for="business-plan">Business plan (PDF) <span class="form-required-mark">*</span></label>
+              <input id="business-plan" name="business_plan" type="file" accept=".pdf" required />
+            </div>
+
+            <div class="form-field">
+              <label for="supporting-documents">Additional supporting documents</label>
+              <input
+                id="supporting-documents"
+                name="supporting_documents"
+                type="file"
+                multiple
+                accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+              />
+              <span class="form-hint">Accepted: PDF, DOC, DOCX, JPG, PNG.</span>
+            </div>
+
+            <label class="form-check form-check--block">
+              <input id="terms-check" name="declaration_truthfulness" type="checkbox" value="1" required />
+              <span>
+                I certify that all information submitted is true and complete, and that BOCRA may
+                verify details with relevant agencies and service providers.
+                <span class="form-required-mark">*</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Submit application</button>
+            <button type="button" class="btn secondary">Save draft</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

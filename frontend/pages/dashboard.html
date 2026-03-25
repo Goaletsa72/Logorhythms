@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BOCRA dashboard — overview of your activity." />
+    <title>Dashboard — BOCRA</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div id="header"></div>
+
+    <main id="main-content" class="page page--dashboard">
+      <div class="container">
+        <header class="page-header">
+          <h1>Dashboard</h1>
+          <p>Summary of your complaints, licensing applications, and latest activity.</p>
+        </header>
+
+        <div class="dashboard-stats">
+          <div class="stat-card stat-card--blue">
+            <span class="stat-card__label">Open complaints</span>
+            <span class="stat-card__value">10</span>
+          </div>
+          <div class="stat-card stat-card--green">
+            <span class="stat-card__label">Active licenses</span>
+            <span class="stat-card__value">5</span>
+          </div>
+        </div>
+
+        <section class="dashboard-grid" aria-label="Dashboard details">
+          <article class="panel-card">
+            <h2>Recent activity</h2>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Reference</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Last update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CP-2026-1042</td>
+                    <td>Complaint</td>
+                    <td><span class="status-chip status-chip--warn">In review</span></td>
+                    <td>24 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>LIC-2026-0188</td>
+                    <td>License renewal</td>
+                    <td><span class="status-chip status-chip--ok">Approved</span></td>
+                    <td>21 Mar 2026</td>
+                  </tr>
+                  <tr>
+                    <td>LIC-2026-0213</td>
+                    <td>New license</td>
+                    <td><span class="status-chip status-chip--info">Submitted</span></td>
+                    <td>20 Mar 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel-card">
+            <h2>Quick actions</h2>
+            <div class="quick-actions">
+              <a href="complaints.html" class="btn primary">New complaint</a>
+              <a href="licensing.html" class="btn secondary">Apply for license</a>
+              <a href="documents.html" class="btn secondary">Open documents</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
