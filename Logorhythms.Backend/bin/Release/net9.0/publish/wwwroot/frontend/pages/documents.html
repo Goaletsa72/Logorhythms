@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BOCRA documents, forms, and regulatory publications." />
+    <title>Documents ? BOCRA</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div id="header"><header class="navbar" role="banner">
+  <div class="navbar__inner">
+
+    <!-- Logo → Homepage -->
+    <a href="index.html" class="navbar__logo" aria-label="BOCRA Homepage">
+      <img src="assets/bocra-logo.png" alt="BOCRA logo" />
+    </a>
+
+    <!-- Mobile hamburger toggle -->
+    <button
+      class="navbar__toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="navbar-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Nav links -->
+    <nav id="navbar-menu" class="navbar__menu" aria-label="Primary navigation">
+      <ul class="navbar__list" role="list">
+        <li><a href="pages/about.html" class="navbar__link">About</a></li>
+        <li><a href="pages/mandate.html" class="navbar__link">Mandate</a></li>
+        <li><a href="pages/documents.html" class="navbar__link">Documents</a></li>
+        <li><a href="pages/media.html" class="navbar__link">Media</a></li>
+        <li><a href="pages/tenders.html" class="navbar__link">Tenders</a></li>
+        <li><a href="pages/telecommunications.html" class="navbar__link">Telecom Stats</a></li>
+        <!-- Last 4: green, blue, red, yellow -->
+        <li><a href="pages/asms-webcp.html" class="navbar__link navbar__link--green">ASMS-WebCP</a></li>
+        <li><a href="pages/licence-verification.html" class="navbar__link navbar__link--blue">Licensing Verification</a></li>
+        <li><a href="pages/type-approval.html" class="navbar__link navbar__link--red">Type Approval</a></li>
+        <li><a href="" class="navbar__link navbar__link--yellow">BOCRA Portal</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+    <main id="main-content" class="page page--documents">
+      <div class="container">
+        <header class="page-header">
+          <h1>Documents library</h1>
+          <p>
+            Search and browse regulatory documents, downloadable forms, public notices, and
+            licensing guides.
+          </p>
+        </header>
+
+        <form class="docs-filter" action="#" method="get">
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="doc-keyword">Keyword</label>
+              <input id="doc-keyword" name="q" type="search" placeholder="Search by title, topic, or reference..." />
+            </div>
+            <div class="form-field">
+              <label for="doc-category">Category</label>
+              <select id="doc-category" name="category">
+                <option value="all" selected>All categories</option>
+                <option value="licensing">Licensing</option>
+                <option value="compliance">Compliance</option>
+                <option value="consumer">Consumer protection</option>
+                <option value="spectrum">Spectrum</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions form-actions--compact">
+            <button type="submit" class="btn primary">Apply filters</button>
+            <button type="reset" class="btn secondary">Reset</button>
+          </div>
+        </form>
+
+        <section class="docs-list" aria-label="Available documents">
+          <article class="doc-card">
+            <div>
+              <span class="doc-card__meta">Latest documents</span>
+              <h2>Media Release - Roaming</h2>
+              <p>Official release on regional collaboration to reduce and harmonise roaming tariffs.</p>
+            </div>
+            <a class="btn secondary" href="https://www.bocra.org.bw/sites/default/files/home%20page%20documents/Media%20Release%20-%20Roaming_0.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          </article>
+
+          <article class="doc-card">
+            <div>
+              <span class="doc-card__meta">Latest documents</span>
+              <h2>Cost Modelling Project Interim report</h2>
+              <p>Interim project outputs supporting market analysis and regulatory economics.</p>
+            </div>
+            <a class="btn secondary" href="https://www.bocra.org.bw/sites/default/files/home%20page%20documents/Cost%20Modelling%20Project%20Interim%20Report_0.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          </article>
+
+          <article class="doc-card">
+            <div>
+              <span class="doc-card__meta">Latest documents</span>
+              <h2>Enforcement Guidelines</h2>
+              <p>Regulatory enforcement guidance and compliance expectations for stakeholders.</p>
+            </div>
+            <a class="btn secondary" href="https://www.bocra.org.bw/sites/default/files/home%20page%20documents/ENFORCEMENT%20GUIDELINES%20-%202nd%20draft%28amended%29%20%282%29_0.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          </article>
+          <article class="doc-card">
+            <div>
+              <span class="doc-card__meta">Popular documents</span>
+              <h2>Understand Broadband Connectivity</h2>
+              <p>Public educational material supporting digital adoption and informed use of services.</p>
+            </div>
+            <a class="btn secondary" href="https://www.bocra.org.bw/sites/default/files/home%20page%20documents/Understand%20Broadband%20Connectivity_0.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+          </article>
+          <article class="doc-card">
+            <div>
+              <span class="doc-card__meta">Documents categories</span>
+              <h2>Draft Documents, ICT Licencing Framework, ITU Workshop</h2>
+              <p>Core official document categories retained for full migration and CMS integration.</p>
+            </div>
+            <div class="hero-buttons">
+              <a class="btn secondary" data-nav="draft-documents" href="#">Draft Documents</a>
+              <a class="btn secondary" data-nav="ict-licensing-framework" href="#">ICT Framework</a>
+              <a class="btn secondary" data-nav="itu-workshop" href="#">ITU Workshop</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

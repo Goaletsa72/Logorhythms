@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="File a communications-related complaint with BOCRA — secure, structured intake.">
+  <title>File a complaint — BOCRA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header"></div>
+
+  <main id="main-content" class="page page--complaint">
+    <div class="container">
+      <header class="page-header">
+        <h1>File a complaint</h1>
+        <p>Complete all required fields. You will receive an acknowledgement with a reference number once your submission is registered.</p>
+      </header>
+
+      <section class="docs-list" aria-label="Complaints guidance">
+        <article class="doc-card">
+          <div>
+            <span class="doc-card__meta">Complaints section</span>
+            <h2>Consumer Education and Advice</h2>
+            <p>Guidance and awareness material to help consumers understand rights and obligations.</p>
+          </div>
+          <a class="btn secondary" data-nav="consumer-education" href="#">Read guidance</a>
+        </article>
+        <article class="doc-card">
+          <div>
+            <span class="doc-card__meta">Complaints section</span>
+            <h2>Registering Complaints</h2>
+            <p>Official process notes and requirements before submitting a formal complaint.</p>
+          </div>
+          <a class="btn secondary" data-nav="registering-complaints" href="#">View process</a>
+        </article>
+      </section>
+
+      <div class="complaint-meta">
+        <div class="complaint-meta__item">
+          <span class="complaint-meta__label">Typical response</span>
+          <span class="complaint-meta__value">5–10 business days</span>
+        </div>
+        <div class="complaint-meta__item">
+          <span class="complaint-meta__label">Reference</span>
+          <span class="complaint-meta__value">Issued after submit</span>
+        </div>
+      </div>
+
+      <!-- The original form: no changes -->
+      <form class="form-panel form-panel--complaint" action="#" method="post" enctype="multipart/form-data">
+        <p class="form-panel__intro">
+          <span class="form-required-mark" aria-hidden="true">*</span> indicates a required field.
+        </p>
+
+        <fieldset class="form-section">
+          <legend class="form-section__title">Your details</legend>
+          <p class="form-section__lead">We use this information only to process your complaint and contact you about it.</p>
+
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="given-name">Given name <span class="form-required-mark">*</span></label>
+              <input id="given-name" name="given_name" type="text" required autocomplete="given-name" placeholder="e.g. Lesedi">
+            </div>
+            <div class="form-field">
+              <label for="family-name">Surname <span class="form-required-mark">*</span></label>
+              <input id="family-name" name="family_name" type="text" required autocomplete="family-name" placeholder="e.g. Khama">
+            </div>
+          </div>
+
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="complaint-email">Work or personal email <span class="form-required-mark">*</span></label>
+              <input id="complaint-email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="you@example.com">
+            </div>
+            <div class="form-field">
+              <label for="complaint-phone">Mobile / telephone <span class="form-required-mark">*</span></label>
+              <input id="complaint-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+267 …">
+            </div>
+          </div>
+
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="id-number">National ID / passport (optional)</label>
+              <input id="id-number" name="id_number" type="text" autocomplete="off" placeholder="If filing on behalf of yourself">
+              <span class="form-hint">Helps us verify identity if the case is escalated.</span>
+            </div>
+            <div class="form-field">
+              <label for="org-name">Organisation (optional)</label>
+              <input id="org-name" name="organisation" type="text" autocomplete="organization" placeholder="Company or entity name">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="preferred-lang">Preferred correspondence language</label>
+            <select id="preferred-lang" name="preferred_language">
+              <option value="en" selected>English</option>
+              <option value="tn">Setswana</option>
+              <option value="other">Other (specify in description)</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend class="form-section__title">Complaint details</legend>
+          <p class="form-section__lead">Be specific about the provider, service, and what went wrong. Attach evidence if you have it.</p>
+
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="complaint-category">Category <span class="form-required-mark">*</span></label>
+              <select id="complaint-category" name="complaint_category" required>
+                <option value="" disabled selected>Select a category</option>
+                <option value="billing">Billing &amp; charges</option>
+                <option value="service">Service quality &amp; outages</option>
+                <option value="licensing">Licensing &amp; compliance</option>
+                <option value="spectrum">Interference &amp; spectrum</option>
+                <option value="consumer">Consumer rights &amp; contracts</option>
+                <option value="postal">Postal services</option>
+                <option value="broadcast">Broadcasting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="service-type">Service type <span class="form-required-mark">*</span></label>
+              <select id="service-type" name="service_type" required>
+                <option value="" disabled selected>Select service type</option>
+                <option value="mobile">Mobile</option>
+                <option value="fixed">Fixed line</option>
+                <option value="broadband">Internet / broadband</option>
+                <option value="leased">Leased line / enterprise</option>
+                <option value="postal">Postal</option>
+                <option value="broadcast">Broadcasting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="provider-name">Name of service provider / operator <span class="form-required-mark">*</span></label>
+            <input id="provider-name" name="provider_name" type="text" required placeholder="Legal or trading name as shown on your bill or contract">
+          </div>
+
+          <div class="form-grid form-grid--2">
+            <div class="form-field">
+              <label for="account-ref">Account or customer reference (optional)</label>
+              <input id="account-ref" name="account_reference" type="text" autocomplete="off" placeholder="Invoice, account, or ticket number">
+            </div>
+            <div class="form-field">
+              <label for="incident-date">Date of incident or first awareness <span class="form-required-mark">*</span></label>
+              <input id="incident-date" name="incident_date" type="date" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="complaint-subject">Subject line <span class="form-required-mark">*</span></label>
+            <input id="complaint-subject" name="subject" type="text" required maxlength="180" placeholder="Short summary — e.g. Incorrect data bundle deduction">
+            <span class="form-hint">Max. 180 characters.</span>
+          </div>
+
+          <div class="form-field">
+            <label for="complaint-detail">Detailed description <span class="form-required-mark">*</span></label>
+            <textarea id="complaint-detail" name="description" required rows="6" placeholder="What happened, step by step? Include dates, amounts, and any reference numbers from the provider. If you contacted them first, say when and how."></textarea>
+            <span class="form-hint">Include what outcome you are seeking (refund, correction, apology, etc.).</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-section">
+          <legend class="form-section__title">Supporting documents &amp; preferences</legend>
+
+          <div class="form-field">
+            <label for="attachments">Upload evidence (optional)</label>
+            <input id="attachments" name="attachments" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple>
+            <span class="form-hint">PDF or images, up to 10 MB each. Redact sensitive information where possible.</span>
+          </div>
+
+          <fieldset class="form-field form-field--radios">
+            <legend class="form-label">Preferred way to receive updates <span class="form-required-mark">*</span></legend>
+            <div class="form-radio-group">
+              <label class="form-check">
+                <input type="radio" name="preferred_contact" value="email" checked required>
+                <span>Email</span>
+              </label>
+              <label class="form-check">
+                <input type="radio" name="preferred_contact" value="phone">
+                <span>Phone call</span>
+              </label>
+              <label class="form-check">
+                <input type="radio" name="preferred_contact" value="sms">
+                <span>SMS</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="form-check form-check--block">
+            <input id="declaration" name="declaration" type="checkbox" value="1" required>
+            <span>
+              I confirm that the information provided is accurate to the best of my knowledge
+              and I understand BOCRA may share relevant details with the licensee where
+              necessary to investigate.
+              <span class="form-required-mark">*</span>
+            </span>
+          </label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Submit complaint</button>
+          <button type="reset" class="btn secondary">Clear form</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+  <script src="../js/main.js"></script>
+
+  <!-- Added script to submit complaint via API (no visual changes) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form.form-panel--complaint');
+      if (!form) return;
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const payload = {
+          fullName: (formData.get('given_name') || '') + ' ' + (formData.get('family_name') || ''),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          complaintType: formData.get('complaint_category'),
+          serviceProvider: formData.get('provider_name'),
+          description: formData.get('description'),
+          subject: formData.get('subject'),
+          serviceType: formData.get('service_type'),
+          incidentDate: formData.get('incident_date'),
+          accountRef: formData.get('account_reference'),
+          preferredContact: formData.get('preferred_contact'),
+          idNumber: formData.get('id_number'),
+          organisation: formData.get('organisation'),
+          preferredLanguage: formData.get('preferred_language')
+        };
+
+        try {
+          const response = await fetch('/api/complaints', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (response.ok) {
+            alert('Complaint submitted successfully!');
+            form.reset(); // clears the form
+          } else {
+            const errorText = await response.text();
+            alert('Error: ' + errorText);
+          }
+        } catch (error) {
+          console.error(error);
+          alert('Network error. Please try again.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

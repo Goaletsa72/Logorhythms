@@ -166,5 +166,18 @@
     <div id="footer"></div>
 
     <script src="js/main.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('.navbar__toggle');
+    const menu = document.querySelector('.navbar__menu');
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
+        this.setAttribute('aria-expanded', expanded);
+        menu.classList.toggle('navbar__menu--open');
+      });
+    }
+  });
+</script>
   </body>
 </html>

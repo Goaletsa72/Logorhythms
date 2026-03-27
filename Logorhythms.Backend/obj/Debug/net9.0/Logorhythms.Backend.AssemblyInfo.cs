@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Logorhythms.Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f9944001ef2cd9716e2dab4f1d95e8fb2803851")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e2968010e93bfd236de5712df6da35a8eb18a9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Logorhythms.Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Logorhythms.Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
